@@ -25,7 +25,7 @@ SECRET_KEY = 'pc&25y)(39$q1o*ujqj%vlvu1%78p2!+#%-tmi44pyd8#)mgfb'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1','peakpoke-gpi.herokuapp.com/']
+ALLOWED_HOSTS = ['127.0.0.1','peakpoke-gpi.herokuapp.com']
 
 
 # Application definition
@@ -124,7 +124,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
+STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS=(
+    os.path.join(BASE_DIR,'static'),
+)
 
 INTERNAL_IPS = [
     # ...
